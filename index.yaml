@@ -3,7 +3,7 @@ entries:
   demochart:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-11-13T13:32:59.794787567+05:30"
+    created: "2023-11-13T15:19:00.534491337+05:30"
     description: A Helm chart for Kubernetes
     digest: 6accac8c1906bf13817d40d4a3c8f2a0694d897902de311c100862151336bbd1
     name: demochart
@@ -11,4 +11,46 @@ entries:
     urls:
     - demochart-0.1.0.tgz
     version: 0.1.0
-generated: "2023-11-13T13:32:59.794067839+05:30"
+  tomcat:
+  - annotations:
+      category: ApplicationServer
+      images: |
+        - name: jmx-exporter
+          image: docker.io/bitnami/jmx-exporter:0.19.0-debian-11-r95
+        - name: os-shell
+          image: docker.io/bitnami/os-shell:11-debian-11-r90
+        - name: tomcat
+          image: docker.io/bitnami/tomcat:10.1.15-debian-11-r0
+      licenses: Apache-2.0
+    apiVersion: v2
+    appVersion: 10.1.15
+    created: "2023-11-13T15:19:00.538115442+05:30"
+    dependencies:
+    - name: common
+      repository: oci://registry-1.docker.io/bitnamicharts
+      tags:
+      - bitnami-common
+      version: 2.x.x
+    description: Apache Tomcat is an open-source web server designed to host and run
+      Java-based web applications. It is a lightweight server with a good performance
+      for applications running in production environments.
+    digest: 23c568392e1f9f59b81e8caf03ebbfa5162ae7c7bf22397e9d6c7e64ce7f1a10
+    home: https://bitnami.com
+    icon: https://bitnami.com/assets/stacks/tomcat/img/tomcat-stack-220x234.png
+    keywords:
+    - tomcat
+    - java
+    - http
+    - web
+    - application server
+    - jsp
+    maintainers:
+    - name: VMware, Inc.
+      url: https://github.com/bitnami/charts
+    name: tomcat
+    sources:
+    - https://github.com/bitnami/charts/tree/main/bitnami/tomcat
+    urls:
+    - tomcat-10.11.0.tgz
+    version: 10.11.0
+generated: "2023-11-13T15:19:00.533213459+05:30"
